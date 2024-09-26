@@ -27,10 +27,10 @@ function ParentComponent() {
       <h1>Count: {count}</h1>
       <p>Parent Render Count: {parentRenderCount.current}</p>
 
-      <h2>Child With useCallback:</h2>
+      <h2 className="text-2xl font-bold">Child With useCallback:</h2>
       <ChildWithCallback onIncrement={incrementWithCallback} />
 
-      <h2>Child Without useCallback:</h2>
+      <h2 className="text-2xl font-bold">Child Without useCallback:</h2>
       <ChildWithoutCallback onIncrement={incrementWithoutCallback} />
 
       <div>

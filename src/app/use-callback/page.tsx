@@ -1,6 +1,5 @@
 import React from "react";
 import ParentComponent from "./ParentComponent";
-import SimpleComponent from "./SimpleComponent";
 
 function App() {
   return (

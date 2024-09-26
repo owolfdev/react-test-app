@@ -1,7 +1,11 @@
-// ChildComponent.jsx
 import React, { useRef } from "react";
 
-const ChildComponent = React.memo(({ onIncrement }) => {
+// Define the prop types
+interface ChildComponentProps {
+  onIncrement: () => void;
+}
+
+const ChildComponent = React.memo(({ onIncrement }: ChildComponentProps) => {
   // Keep track of how many times the child has rendered
   const childRenderCount = useRef(0);
   childRenderCount.current += 1;
@@ -13,5 +17,7 @@ const ChildComponent = React.memo(({ onIncrement }) => {
     </div>
   );
 });
+
+ChildComponent.displayName = "ChildComponent";
 
 export default ChildComponent;
